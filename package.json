@@ -1,0 +1,40 @@
+{
+  "name": "universal-react-boilerplate",
+  "version": "0.0.1",
+  "description": "My custom boilerplate for full stack react apps",
+  "main": "index.js",
+  "author": "Spencer Snyder <sasnyde2@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node server",
+    "start:server": "nodemon --exec \"node --require \"dotenv/config\" --require \"babel-register\" server/index\"",
+    "start:client": "webpack -wd",
+    "dev": "concurrently \"yarn start:server\" \"yarn start:client\"",
+    "test": "jest --watchAll --verbose"
+  },
+  "dependencies": {
+    "babel-loader": "^7.1.2",
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "morgan": "^1.9.0",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "webpack": "^3.7.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^8.0.1",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "concurrently": "^3.5.0",
+    "dotenv": "^4.0.0",
+    "eslint": "^4.9.0",
+    "eslint-config-airbnb": "^16.0.0",
+    "eslint-plugin-babel": "^4.1.2",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-react": "^7.4.0"
+  }
+}

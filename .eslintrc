@@ -1,0 +1,15 @@
+{
+  extends:                          'airbnb',
+  parser:                           'babel-eslint',
+  env:                              {
+    browser:                        true,
+    node:                           true,
+    jest:                           true,
+  },
+  rules:                            {
+    'import/no-unresolved': [2, { caseSensitive: false }],
+    'no-console':                   'off',
+    'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
+    'react/prop-types': [0, { ignore: [], customValidators: [] }],
+  },
+}
