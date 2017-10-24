@@ -1,21 +1,57 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Link, Route, Switch } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 
-import PageOne from './PageOne';
-import PageTwo from './PageTwo';
+import Menu from './Menu';
 
-class App extends Component {
-  componentDidMount() {
-    console.log('Hello from app and JS!');
-  }
+class Homepage extends Component {
   render() {
     return (
-      <Switch>
-        <Route exact path="/" component={PageOne} />
-        <Route component={PageTwo} />
-      </Switch>
+      <div>
+        <Menu />
+        <h1>Homepage</h1>
+      </div>
     );
   }
 }
 
-export default App;
+class About extends Component {
+  render() {
+    return (
+      <div>
+        <Menu />
+
+        <h1>About</h1>
+      </div>
+    );
+  }
+}
+
+class Contact extends Component {
+  render() {
+    return (
+      <div>
+        <Menu />
+
+        <h1>Contact</h1>
+      </div>
+    );
+  }
+}
+
+export default class App extends Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    return (
+      <div>
+        <Switch>
+          <Route exact path="/" component={Homepage} />
+          <Route path="/about" component={About} />
+          <Route path="/contact" component={Contact} />
+        </Switch>
+      </div>
+    );
+  }
+}
