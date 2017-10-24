@@ -8,7 +8,7 @@ class Homepage extends Component {
     return (
       <div>
         <Menu />
-        <h1>Homepage</h1>
+        <h1>Home</h1>
       </div>
     );
   }
