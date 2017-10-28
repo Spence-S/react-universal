@@ -20,7 +20,7 @@ class About extends Component {
       <div>
         <Menu />
 
-        <h1>About</h1>
+        <h1 style={{ color: 'black' }}>About Me</h1>
       </div>
     );
   }

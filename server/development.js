@@ -14,9 +14,10 @@ app.use(logger('dev'));
 
 app.use(webpackDevMiddleware(compiler, {
   publicPath: '/static/',
+  serverSideRender: true,
 }));
 
 app.use(webpackHotMiddleware(compiler.compilers.find(compiler => compiler.name === 'client')));
-app.use(webpackHotServerMiddleware(compiler));
+app.use(webpackHotServerMiddleware(compiler, { hot: true }));
 
 app.listen(3000);
